@@ -11,15 +11,15 @@ function calEaster(A) {
     const e = (2 * b + 4 * c + 6 * d + N) % 7;
 
     if (d + e < 10) {
-        return new Date(A, 2, d + e + 22);
+        return new Date(A, 2, d + e + 22).getTime();
     }
 
     if (d + e > 10){
-        return new Date(A, 3, d + e - 9);
+        return new Date(A, 3, d + e - 9).getTime();
     }
 
     if (d + e === 10) {
-        return new Date(A, 3, 19);
+        return new Date(A, 3, 19).getTime();
     }
 }
 module.exports = calEaster;
